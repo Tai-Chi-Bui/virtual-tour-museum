@@ -6,7 +6,7 @@ import './style.css';
 const Page1 = () => {
     const [yaw, setYaw] = useState(0);
     const [pitch, setPitch] = useState(0);
-    const [ image ] = useState('https://pannellum.org/images/bma-0.jpg');
+    const [ image ] = useState('/images/Keangnam.jpg');
     const panImage = useRef<any>(null);
 
     return (
@@ -37,18 +37,6 @@ const Page1 = () => {
                     setYaw(panImage.current.getViewer().mouseEventToCoords(event)[1]);
                 }}
             >
-                <Pannellum.Hotspot
-                    type='info'
-                    pitch={10}
-                    yaw={90}
-                    text='Beach View'
-                />
-                <Pannellum.Hotspot
-                    type='info'
-                    pitch={-10}
-                    yaw={-90}
-                    text='Ocean Horizon'
-                />
             </Pannellum>
         </div>
     )
