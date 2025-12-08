@@ -56,6 +56,7 @@ const Page2 = () => {
                 autoLoad
                 compass
                 disableKeyboardCtrl
+                // @ts-ignore - ref is supported but not in types
                 ref={panImage}
                 onMouseup = {(event: any) => {
                     setPitch(panImage.current.getViewer().mouseEventToCoords(event)[0]);
